@@ -101,3 +101,7 @@ type readOrWrite = 'read' | 'write';
 type bulk = 'bulk' | '';
 
 type access = `can${Capitalize<readOrWrite>}${Capitalize<bulk>}`;
+
+type OmittedUserRoles = Omit<UserRoles, 'Projects'>;
+
+type ExtractEx = Extract<'Project', string>;
